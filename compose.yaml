@@ -1,0 +1,12 @@
+services:
+  notebook:
+    container_name: notebook
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./notebooks:/notebooks
+    ports:
+      - 8888:8888
+    tty: true
+    # command:
